@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./Assets/Favicon/favicon-16x16.png">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/hamburgers.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+  <title>My Landing Page</title>
+</head>
+
+<body>
+  <header>
+    <button class="nav-button hamburger hamburger--elastic" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <nav class="nav-container">
+      <ul class="menu-desktop">
+        <li><a href="#" class="home"><i class="fas fa-home"></i><br> Home</a></li>
+        <li><a href="#about-me" class="acercaDeMi"><i class="fas fa-address-card"></i><br> Acerca de Mi</a></li>
+        <li><a href="#portfolio" class="portafolio"><i class="fas fa-folder"></i><br> Portafolio</a></li>
+        <li><a href="#contact" class="contacto"><i class="fas fa-mail-bulk"></i><br> Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="sec1-container">
+      <figure class="col-5"><img src="./Assets/pexels-italo-melo-2379004.jpg" alt="pic-me"
+          class="sec1-container__pic-me">
+      </figure>
+      <div class="col-4 sec1-container__text-aboutme">
+        <h6>Hola !</h6>
+        <h2>Soy <span>Héctor Muñoz,</span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quam consequuntur magni iusto. Alias nihil,
+          hic reprehenderit ad odit, debitis tempora neque repellat minima ullam aliquam ipsum maiores quis expedita?.
+        </p>
+        <a href="#about-me" class="sec1-container__button">Más sobre mi</a>
+      </div>
+    </section>
+    <section class="sec2-container">
+      <h3 id="about-me">
+        Información Personal
+      </h3>
+      <figure><img src="./Assets/pexels-italo-melo-2379004.jpg" alt="pic-me" class="sec2-container__pic-me"></figure>
+      <div class="sec2-container__col2-info">
+        <ul>
+          <li>
+            <span class="sec2-container__col2-info__title">Nombre:</span>
+            <span class="sec2-container__col2-info__info">Héctor</span>
+          </li>
+          <li>
+            <span class="sec2-container__col2-info__title">Edad:</span>
+            <span class="sec2-container__col2-info__info">29 años</span>
+          </li>
+          <li>
+            <span class="sec2-container__col2-info__title">Idiomas:</span>
+            <span class="sec2-container__col2-info__info">Español, Ingles</span>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <span class="sec2-container__col2-info__title">Apellidos:</span>
+            <span class="sec2-container__col2-info__info">Muñoz Morales</span>
+          </li>
+          <li>
+            <span class="sec2-container__col2-info__title">Ubicación:</span>
+            <span class="sec2-container__col2-info__info">Tlaxcala, México</span>
+          </li>
+          <li>
+            <span class="sec2-container__col2-info__title">Profesión:</span>
+            <span class="sec2-container__col2-info__info">Desarrollador Web Full-Stack</span>
+          </li>
+        </ul>
+      </div>
+      <h3>Skills</h3>
+      <div class="sec2-container__Skills-box">
+        <div class="sec2-container__Skills-box-html"></div>
+      </div>
+      <div class="sec2-container__Skills-name"><i class="fab fa-html5"></i><span>HTML</span></div>
+      <div class="sec2-container__Skills-box">
+        <div class="sec2-container__Skills-box-css"></div>
+      </div>
+      <div class="sec2-container__Skills-name"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+      <div class="sec2-container__Skills-box">
+        <div class="sec2-container__Skills-box-js"></div>
+      </div>
+      <div class="sec2-container__Skills-name"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+      <div class="sec2-container__Skills-box">
+        <div class="sec2-container__Skills-box-figma"></div>
+      </div>
+      <div class="sec2-container__Skills-name"><i class="fab fa-figma"></i><span>Figma</span></div>
+    </section>
+    <section class="sec3-container">
+      <h3 id="portfolio">Portafolio</h3>
+      <div class="sec3-container__img">
+        <figure class="sec3-container__img-fig"><img src="https://placeimg.com/640/480/tech" alt="proyecto1">
+          <div class="capa">
+            <h6>Proyecto 1</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, earum!</p>
+          </div>
+        </figure>
+        <figure class="sec3-container__img-fig"><img src="https://placeimg.com/640/480/arch" alt="proyecto2">
+          <div class="capa">
+            <h6>Proyecto 2</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, earum!</p>
+          </div>
+        </figure>
+        <figure class="sec3-container__img-fig"><img src="https://placeimg.com/640/480/nature" alt="proyecto3">
+          <div class="capa">
+            <h6>Proyecto 3</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, earum!</p>
+          </div>
+        </figure>
+        <figure class="sec3-container__img-fig"><img src="https://placeimg.com/640/480/people" alt="proyecto3">
+          <div class="capa">
+            <h6>Proyecto 4</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, earum!</p>
+          </div>
+        </figure>
+      </div>
+    </section>
+    <section class="sec4-container">
+      <h3 id="contact">Contactame</h3>
+      <div class="sec4-container__contact">
+        <h6>Me alegra recibir mensajes!</h6>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolores suscipit fuga molestiae ut esse
+          placeat dolorum quas commodi fugit?</p>
+        <p><i class="fas fa-envelope-open"></i><span> CORREO <br> munozmoraleshector@gmail.com</span></p>
+        <p><i class="fas fa-phone-square-alt"></i><span>TELEFONO<br> 999-111-222</span></p>
+      </div>
+      <ul class="sec4-container__social">
+        <li><a href=""><i class="fab fa-facebook"></i></a></li>
+        <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
+        <li><a href=""><i class="fab fa-instagram-square"></i></a></li>
+        <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+    </section>
+  </main>
+  <hr>
+  <footer>
+    <div class="footer">
+      <p>Copyright &copy; 2021 Héctor Muñoz, todos los derechos reservados.</p>
+      <a href="https://github.com/Hector-MuMo" target="_blank"><i class="fab fa-github-square"></i></a>
+    </div>
+  </footer>
+  <script src="./Js/scripts.js" type="module"></script>
+  <script src="https://kit.fontawesome.com/ed8e03132d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
