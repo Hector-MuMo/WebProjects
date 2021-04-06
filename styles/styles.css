@@ -15,28 +15,47 @@
 }
 
 body {
-  background-color: #111;
+  width: 100%;
+  background: #000;
+  animation-name: bodyColor;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes bodyColor {
+  20% {
+    background: #111;
+    transition: ease;
+  }
 }
 
-/*********************** Navigation-Bar ************************/
-
-.nav-container .menu-desktop {
+/******************** Navigation-Bar *********************/
+.nav-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 990;
+  width: 100%;
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+  transform: translate(-100%, 0);
+}
+.nav-container.is-active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.menu-desktop {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: fixed;
-  width: 100%;
   top: 0;
   bottom: 0;
+  z-index: 990;
+  width: 100%;
   background-color: rgba(30, 30, 30, 0.8);
 }
-.nav-container {
-  transform: translate(-100%, 0);
-}
-.nav-container.is-active {
-  transform: translate(0, 0);
-}
+
 .nav-container .menu-desktop li {
   display: block;
   width: 100%;
@@ -58,13 +77,14 @@ body {
 }
 .nav-container .menu-desktop a i {
   font-size: 3.6rem;
-  padding: 4.1rem 2rem 2rem 2rem;
+  padding: 2rem;
 }
 
 header .nav-button {
   position: fixed;
-  bottom: 1vh;
-  right: 1vh;
+  bottom: 0.5vh;
+  right: 0.5vh;
+  z-index: 999;
   background-color: var(--main-color);
   border-radius: 1rem;
   animation-name: btnHamColor;
@@ -105,11 +125,13 @@ figure {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 .sec1-container__text-aboutme {
   display: flex;
   flex-direction: column;
+  max-width: 80%;
 }
 .sec1-container figure {
   display: none;
@@ -178,9 +200,9 @@ figure {
 .sec2-container figure {
   align-self: center;
   border: 1rem solid var(--main-color);
-  border-radius: 50%;
+  border-radius: 2rem;
   margin: 2rem 1rem;
-  max-width: 80%;
+  max-width: 60%;
   animation-name: borderImg;
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -193,8 +215,7 @@ figure {
 .sec2-container .sec2-container__pic-me {
   max-width: 100%;
   object-fit: cover;
-  border: 3px solid #333;
-  border-radius: 50%;
+  border-radius: 1rem;
 }
 .sec2-container__col2-info {
   display: flex;
@@ -300,8 +321,148 @@ figure {
   max-width: 80%;
 }
 .sec3-container__img-fig {
+  position: relative;
   align-self: center;
+  border: none;
+  overflow: hidden;
 }
+.sec3-container__img-fig img {
+  transition: all 500ms ease-out;
+}
+.sec3-container__img-fig .capa {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 3.6rem;
+  background-color: rgba(0, 103, 123, 0.7);
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+}
+.sec3-container__img-fig:hover > .capa {
+  opacity: 1;
+  visibility: visible;
+}
+.sec3-container__img-fig:hover > .capa h6 {
+  margin-top: 7rem;
+  margin-bottom: 1.5rem;
+}
+.sec3-container__img-fig:hover > img {
+  transform: scale(1.3);
+}
+.sec3-container__img-fig .capa h6 {
+  color: var(--letters-color);
+  font-size: 2.6rem;
+  font-weight: 900;
+  margin-top: 3rem;
+  margin-bottom: 15rem;
+  transition: all 500ms ease-out;
+}
+.sec3-container__img-fig .capa p {
+  color: var(--letters-color);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 22rem;
+  margin: auto;
+}
+
+/*************** Section4 - Contact *****************/
+.sec4-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  color: var(--letters-color);
+}
+.sec4-container__contact {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sec4-container__contact h6 {
+  margin: 1rem;
+  font-size: 2.4rem;
+}
+.sec4-container__contact p {
+  display: flex;
+  margin: 1rem;
+  font-size: 2rem;
+}
+.sec4-container__contact p i {
+  margin: 1rem;
+  font-size: 3rem;
+  color: var(--main-color);
+  animation-name: contact;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes contact {
+  20% {
+    color: var(--trans-color);
+  }
+}
+.sec4-container__contact span {
+  margin: 1rem;
+  font-size: 1.8rem;
+  word-wrap: break-word;
+}
+.sec4-container__social {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.sec4-container__social a i {
+  font-size: 5rem;
+  margin: 2rem;
+}
+.fa-facebook {
+  color: #036ee4;
+}
+.fa-twitter-square {
+  color: #1da1f2;
+}
+.fa-instagram-square {
+  color: #b43095;
+}
+.fa-linkedin {
+  color: #0073b1;
+}
+/*************** Footer *****************/
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #222;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  color: var(--letters-color);
+  font-size: 2.6rem;
+}
+.footer p {
+  padding: 2rem;
+}
+.footer i {
+  font-size: 4rem;
+  color: var(--main-color);
+  animation-name: footerGit;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes footerGit {
+  20% {
+    color: var(--trans-color);
+  }
+}
+
 /* MEDIA QUERY */
 @media (min-width: 769px) {
   /*********************** Grid-Responsive ************************/
@@ -326,7 +487,15 @@ figure {
   }
   /*********************** General-Responsive ************************/
   body {
-    background-color: #222;
+    background-color: #000;
+    animation-name: bodyColor;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes bodyColor {
+    20% {
+      background-color: #111;
+    }
   }
   h3 {
     font-size: 3.6rem;
@@ -339,28 +508,28 @@ figure {
     margin: 0;
     border: solid #333;
   }
-  /*********************** Navigation-Bar-Responsive ************************/
+  /************** Navigation-Bar-Responsive ***************/
   header .nav-button {
     display: none;
   }
   .nav-container {
     display: flex;
     align-items: center;
-    position: static;
+    position: fixed;
+    top: 30vh;
+    right: 1vh;
+    width: 10%;
+    height: 30%;
     box-shadow: 0 0 0;
-    transform: none;
+    transform: translate(0, 0);
+    opacity: 1;
   }
   .nav-container .menu-desktop {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin-top: 25rem;
-    width: 10%;
-    height: 30%;
-    background-color: #222;
+    background-color: transparent;
+    transform: translate(0, 0);
   }
   .nav-container .menu-desktop li {
     display: flex;
@@ -372,9 +541,8 @@ figure {
     display: inline-block;
     font-size: 1.6rem;
     color: var(--letters-color);
-    padding: 1rem;
-    margin: 1rem;
     text-decoration: none;
+    text-align: center;
   }
   .nav-container .menu-desktop a:hover {
     color: var(--main-color);
@@ -387,7 +555,7 @@ figure {
     padding-bottom: 0.8rem;
   }
 
-  /*********************** Main-Home-Responsive ************************/
+  /************** Section1-Home-Responsive *****************/
   .sec1-container {
     display: flex;
     flex-direction: row;
@@ -396,9 +564,13 @@ figure {
   }
   .sec1-container figure {
     display: inline-block;
-    max-width: 35%;
+    max-width: 45%;
+    min-width: 45%;
+    max-height: 30%;
+    min-height: 30%;
     border: 1rem solid var(--main-color);
     border-radius: 20px;
+    margin: 5rem 2rem;
     animation-name: borderImg;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -427,7 +599,7 @@ figure {
     font-size: 5rem;
   }
   .sec1-container__text-aboutme p {
-    font-size: 2.6rem;
+    font-size: 2rem;
   }
   .sec1-container__text-aboutme .sec1-container__button {
     align-self: flex-start;
@@ -442,11 +614,11 @@ figure {
   .sec2-container__col2-info__title {
     letter-spacing: 0.8pt;
     font-weight: lighter;
-    font-size: 2.6rem;
+    font-size: 1.8rem;
   }
   .sec2-container__col2-info__info {
     font-weight: bolder;
-    font-size: 2.6rem;
+    font-size: 2rem;
   }
 
   /**************** Section2 - Skills - Responsive *******************/
@@ -455,7 +627,7 @@ figure {
     max-width: 60%;
   }
 
-  /****************** Section3 - Portfolio -Responsive ************************/
+  /****************** Section3 - Portfolio - Responsive ************************/
   .sec3-container {
     display: flex;
     flex-wrap: wrap;

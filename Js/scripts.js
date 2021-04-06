@@ -14,6 +14,6 @@ function hamburgerMenu(panelBtn, panel, menuLink) {
   });
 }
 
-d.addEventListener("DOMContentLoaded", (e) => {
+document.addEventListener("DOMContentLoaded", (e) => {
   hamburgerMenu(".nav-button", ".nav-container", ".menu-desktop a");
 });
