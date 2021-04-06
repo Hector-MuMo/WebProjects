@@ -15,15 +15,7 @@
 }
 
 body {
-  background-color: #000;
-  animation-name: bodyColor;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-}
-@keyframes bodyColor {
-  20% {
-    background-color: #111;
-  }
+  background-color: #111;
 }
 
 /*********************** Navigation-Bar ************************/
@@ -66,13 +58,13 @@ body {
 }
 .nav-container .menu-desktop a i {
   font-size: 3.6rem;
-  padding: 2rem;
+  padding: 4.1rem 2rem 2rem 2rem;
 }
 
 header .nav-button {
   position: fixed;
-  bottom: 0.5vh;
-  right: 0.5vh;
+  bottom: 1vh;
+  right: 1vh;
   background-color: var(--main-color);
   border-radius: 1rem;
   animation-name: btnHamColor;
@@ -308,147 +300,8 @@ figure {
   max-width: 80%;
 }
 .sec3-container__img-fig {
-  position: relative;
   align-self: center;
-  border: none;
-  overflow: hidden;
 }
-.sec3-container__img-fig img {
-  transition: all 500ms ease-out;
-}
-.sec3-container__img-fig .capa {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 3.6rem;
-  background-color: rgba(0, 103, 123, 0.7);
-  transition: all 500ms ease-out;
-  opacity: 0;
-  visibility: hidden;
-  text-align: center;
-}
-.sec3-container__img-fig:hover > .capa {
-  opacity: 1;
-  visibility: visible;
-}
-.sec3-container__img-fig:hover > .capa h6 {
-  margin-top: 7rem;
-  margin-bottom: 1.5rem;
-}
-.sec3-container__img-fig:hover > img {
-  transform: scale(1.3);
-}
-.sec3-container__img-fig .capa h6 {
-  color: var(--letters-color);
-  font-size: 2.6rem;
-  font-weight: 900;
-  margin-top: 3rem;
-  margin-bottom: 15rem;
-  transition: all 500ms ease-out;
-}
-.sec3-container__img-fig .capa p {
-  color: var(--letters-color);
-  font-size: 1.6rem;
-  line-height: 1.5;
-  width: 100%;
-  max-width: 22rem;
-  margin: auto;
-}
-
-/*************** Section4 - Contact *****************/
-.sec4-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  min-height: 100vh;
-  color: var(--letters-color);
-}
-.sec4-container__contact {
-  display: flex;
-  flex-direction: column;
-  max-width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.sec4-container__contact h6 {
-  margin: 1rem;
-  font-size: 2.6rem;
-}
-.sec4-container__contact p {
-  display: flex;
-  margin: 1rem;
-  font-size: 2.3rem;
-}
-.sec4-container__contact p i {
-  margin: 1rem;
-  font-size: 3.6rem;
-  color: var(--main-color);
-  animation-name: contact;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-}
-@keyframes contact {
-  20% {
-    color: var(--trans-color);
-  }
-}
-.sec4-container__contact span {
-  margin: 1rem;
-  font-size: 2.3rem;
-}
-.sec4-container__social {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
-.sec4-container__social a i {
-  font-size: 5rem;
-  margin: 2rem;
-}
-.fa-facebook {
-  color: #036ee4;
-}
-.fa-twitter-square {
-  color: #1da1f2;
-}
-.fa-instagram-square {
-  color: #b43095;
-}
-.fa-linkedin {
-  color: #0073b1;
-}
-/*************** Footer *****************/
-footer {
-  display: flex;
-  justify-content: center;
-  background-color: #222;
-}
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  color: var(--letters-color);
-  font-size: 2.6rem;
-}
-.footer p {
-  padding: 2rem;
-}
-.footer i {
-  font-size: 4rem;
-  color: var(--main-color);
-  animation-name: footerGit;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes footerGit {
-  20% {
-    color: var(--trans-color);
-  }
-}
-
 /* MEDIA QUERY */
 @media (min-width: 769px) {
   /*********************** Grid-Responsive ************************/
@@ -473,15 +326,7 @@ footer {
   }
   /*********************** General-Responsive ************************/
   body {
-    background-color: #000;
-    animation-name: bodyColor;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-  }
-  @keyframes bodyColor {
-    20% {
-      background-color: #111;
-    }
+    background-color: #222;
   }
   h3 {
     font-size: 3.6rem;
@@ -510,11 +355,12 @@ footer {
     flex-direction: column;
     justify-content: center;
     position: fixed;
-    top: 30vh;
-    right: 1vh;
+    top: 0;
+    right: 0;
+    margin-top: 25rem;
     width: 10%;
     height: 30%;
-    background-color: transparent;
+    background-color: #222;
   }
   .nav-container .menu-desktop li {
     display: flex;
@@ -526,8 +372,9 @@ footer {
     display: inline-block;
     font-size: 1.6rem;
     color: var(--letters-color);
+    padding: 1rem;
+    margin: 1rem;
     text-decoration: none;
-    text-align: center;
   }
   .nav-container .menu-desktop a:hover {
     color: var(--main-color);
@@ -550,10 +397,8 @@ footer {
   .sec1-container figure {
     display: inline-block;
     max-width: 35%;
-    max-height: 60%;
     border: 1rem solid var(--main-color);
     border-radius: 20px;
-    margin: 5rem 2rem;
     animation-name: borderImg;
     animation-duration: 5s;
     animation-iteration-count: infinite;
