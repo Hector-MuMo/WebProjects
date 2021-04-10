@@ -16,18 +16,21 @@
 
 body {
   width: 100%;
-  background: #000;
-  animation-name: bodyColor;
+  position: relative;
+
+  /*  animation-name: bodyColor;
   animation-duration: 10s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
 }
-@keyframes bodyColor {
+/* @keyframes bodyColor {
   20% {
     background: #111;
     transition: ease;
   }
+} */
+.bg-img {
+  background: url(../Assets/backgroundComputer.jpg) top/2500px no-repeat;
 }
-
 /******************** Navigation-Bar *********************/
 .nav-container {
   position: fixed;
@@ -140,11 +143,15 @@ figure {
   font-size: 2.6rem;
   color: var(--letters-color);
   padding: 1rem;
+  background: #000;
+  border-radius: 2rem 2rem 0 0;
 }
 .sec1-container h2 {
   font-size: 3.6rem;
   color: var(--letters-color);
   padding: 1rem;
+  background: #000;
+  border-radius: 2rem 2rem 0 0;
 }
 .sec1-container h2 span {
   font-size: 3.6rem;
@@ -162,6 +169,8 @@ figure {
   font-size: 1.6rem;
   color: var(--letters-color);
   padding: 1rem;
+  background: #000;
+  border-radius: 1rem;
 }
 .sec1-container .sec1-container__button {
   align-self: flex-end;
@@ -192,6 +201,9 @@ figure {
 }
 
 /*********************** Section2 - AboutMe **********************/
+.bg-color {
+  background: #000;
+}
 .sec2-container {
   display: flex;
   flex-direction: column;
@@ -202,7 +214,8 @@ figure {
   border: 1rem solid var(--main-color);
   border-radius: 2rem;
   margin: 2rem 1rem;
-  max-width: 60%;
+  min-width: 300px;
+  width: 50%;
   animation-name: borderImg;
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -248,8 +261,7 @@ figure {
   border-radius: 1rem;
   width: 80%;
   height: 50px;
-  /* min-width: 50%;
-  min-height: 20%; */
+  margin: 1rem 0;
 }
 /**** Skill Boxes-front ****/
 .sec2-container__Skills-box-html {
@@ -257,29 +269,35 @@ figure {
   border-radius: 1rem;
   max-width: 80%;
   min-height: 100%;
+  transition: all 3s ease;
 }
+
 .sec2-container__Skills-box-css {
   background-color: #0091ca;
   border-radius: 1rem;
   max-width: 65%;
   min-height: 100%;
+  transition: all 3s ease;
 }
 .sec2-container__Skills-box-js {
   background-color: #f7df1e;
   border-radius: 1rem;
   max-width: 40%;
   min-height: 100%;
+  transition: all 3s ease;
 }
 .sec2-container__Skills-box-figma {
   background-color: #9d56f7;
   border-radius: 1rem;
   max-width: 30%;
   min-height: 100%;
+  transition: all 3s ease;
 }
 /* Skill Names */
 .sec2-container__Skills-name {
   display: flex;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 .sec2-container__Skills-name .fa-html5 {
   color: #dd4b25;
@@ -481,7 +499,7 @@ footer {
     display: flex;
     width: 41.66%;
   }
-  .col-5 {
+  .col-6 {
     display: flex;
     width: 50%;
   }
@@ -502,12 +520,11 @@ footer {
     align-self: center;
     margin: 3rem;
   }
-  figure {
-    align-self: center;
+  /* figure {
     max-width: 80%;
     margin: 0;
     border: solid #333;
-  }
+  } */
   /************** Navigation-Bar-Responsive ***************/
   header .nav-button {
     display: none;
@@ -516,7 +533,7 @@ footer {
     display: flex;
     align-items: center;
     position: fixed;
-    top: 30vh;
+    top: 5vh;
     right: 1vh;
     width: 10%;
     height: 30%;
@@ -564,10 +581,9 @@ footer {
   }
   .sec1-container figure {
     display: inline-block;
-    max-width: 45%;
-    min-width: 45%;
-    max-height: 30%;
-    min-height: 30%;
+    align-self: center;
+    min-width: 400px;
+    width: 25%;
     border: 1rem solid var(--main-color);
     border-radius: 20px;
     margin: 5rem 2rem;
@@ -614,11 +630,11 @@ footer {
   .sec2-container__col2-info__title {
     letter-spacing: 0.8pt;
     font-weight: lighter;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .sec2-container__col2-info__info {
     font-weight: bolder;
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   /**************** Section2 - Skills - Responsive *******************/
