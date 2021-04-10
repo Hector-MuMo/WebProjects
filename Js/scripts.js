@@ -1,6 +1,6 @@
-function hamburgerMenu(panelBtn, panel, menuLink) {
-  const d = document;
+const d = document;
 
+function hamburgerMenu(panelBtn, panel, menuLink) {
   d.addEventListener("click", (e) => {
     if (e.target.matches(panelBtn) || e.target.matches(`${panelBtn} *`)) {
       d.querySelector(panel).classList.toggle("is-active");
@@ -14,6 +14,6 @@ function hamburgerMenu(panelBtn, panel, menuLink) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", (e) => {
+d.addEventListener("DOMContentLoaded", (e) => {
   hamburgerMenu(".nav-button", ".nav-container", ".menu-desktop a");
 });

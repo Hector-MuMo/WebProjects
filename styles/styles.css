@@ -269,35 +269,46 @@ figure {
   border-radius: 1rem;
   max-width: 80%;
   min-height: 100%;
-  transition: all 3s ease;
+  transition: 300ms ease-in all;
 }
-
+.sec2-container__Skills-box-html:hover {
+  transform: scale(1.1);
+}
 .sec2-container__Skills-box-css {
   background-color: #0091ca;
   border-radius: 1rem;
   max-width: 65%;
   min-height: 100%;
-  transition: all 3s ease;
+  transition: 300ms ease-in all;
+}
+.sec2-container__Skills-box-css:hover {
+  transform: scale(1.1);
 }
 .sec2-container__Skills-box-js {
   background-color: #f7df1e;
   border-radius: 1rem;
   max-width: 40%;
   min-height: 100%;
-  transition: all 3s ease;
+  transition: 300ms ease-in all;
+}
+.sec2-container__Skills-box-js:hover {
+  transform: scale(1.1);
 }
 .sec2-container__Skills-box-figma {
   background-color: #9d56f7;
   border-radius: 1rem;
   max-width: 30%;
   min-height: 100%;
-  transition: all 3s ease;
+  transition: 300ms ease-in all;
 }
-/* Skill Names */
+.sec2-container__Skills-box-figma:hover {
+  transform: scale(1.1);
+}
+/****** Skill Names *******/
 .sec2-container__Skills-name {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  transition: 300ms ease-in all;
 }
 .sec2-container__Skills-name .fa-html5 {
   color: #dd4b25;
@@ -353,7 +364,7 @@ figure {
   width: 100%;
   height: 100%;
   font-size: 3.6rem;
-  background-color: rgba(0, 103, 123, 0.7);
+  background-color: rgba(0, 103, 123, 0.5);
   transition: all 500ms ease-out;
   opacity: 0;
   visibility: hidden;
@@ -437,6 +448,10 @@ figure {
 .sec4-container__social a i {
   font-size: 5rem;
   margin: 2rem;
+  transition: 300ms ease-in-out all;
+}
+.sec4-container__social a i:hover {
+  transform: scale(1.3);
 }
 .fa-facebook {
   color: #036ee4;
@@ -449,6 +464,72 @@ figure {
 }
 .fa-linkedin {
   color: #0073b1;
+}
+/* ************* Contact-Form ************** */
+.form {
+  padding: 3rem;
+  margin-top: 5rem;
+}
+.form-title {
+  display: block;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.form__label {
+  display: block;
+  font-weight: bold;
+  font-size: 2.2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.form__group-input {
+  margin-bottom: 2rem;
+}
+.form__input {
+  width: 60%;
+  background: #fff;
+  border: 0.5rem solid transparent;
+  border-radius: 1rem;
+  font-size: 2rem;
+  height: 4.3rem;
+  line-height: 4.3rem;
+  padding: 0 4rem 0 1rem;
+  transition: 1s ease all;
+}
+.form__input:focus {
+  border: 0.5rem solid var(--main-color);
+  animation: borderContact 5s 0.5s infinite;
+  outline: none;
+  box-shadow: 0.3rem 0 0.3rem rgba(163, 163, 163, 0.4);
+}
+@keyframes borderContact {
+  20% {
+    border: 0.5rem solid var(--trans-color);
+  }
+}
+.form hr {
+  margin: 1rem 0;
+}
+/* .form__group-snd-btn */
+.form-btn {
+  display: inline-block;
+  margin: 2rem 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: var(--main-color);
+  animation: btnContact 5s infinite;
+}
+@keyframes btnContact {
+  20% {
+    background: var(--trans-color);
+  }
+}
+.form-btn a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  font-size: 2.2rem;
 }
 /*************** Footer *****************/
 footer {
@@ -654,5 +735,24 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+  }
+
+  /* ************* Section4 - Contact-Form Responsive ************** */
+  .form {
+    align-self: center;
+    width: 50%;
+  }
+  .form__group {
+    display: flex;
+    flex-direction: column;
+  }
+  .form__group-snd-btn {
+    display: flex;
+  }
+  .form-btn {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 20rem;
   }
 }
